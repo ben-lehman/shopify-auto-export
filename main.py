@@ -122,11 +122,11 @@ def get_all_customers(shop, filename, fields):
 if __name__ == '__main__':
 
     API_KEY = cfg.API_KEY
-    API_SECRET = cfg.API_SECRET
+    PASS = cfg.PASS
     HOST = cfg.HOST
 
     # Set Shop
-    shop_url = "https://%s:%s@%s" % (API_KEY, API_SECRET, HOST)
+    shop_url = "https://%s:%s@%s" % (API_KEY, PASS, HOST)
     shopify.ShopifyResource.set_site(shop_url)
 
     order_fields = 'id,email,created_at,total_price,buyer_accepts_marketing,location_id'
